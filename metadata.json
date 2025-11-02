@@ -1,0 +1,5 @@
+{
+  "name": "Gemini Video Studio",
+  "description": "An AI-powered video editing application that generates high-quality videos from text prompts and images using Google's Gemini API.",
+  "requestFramePermissions": []
+}
