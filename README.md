@@ -89,30 +89,55 @@ For the best results with Google Veo, structure prompts with cinematic descripto
 
 ---
 
+## ⚡ Remotion Motion Graphics Studio
+
+Gemini Video Studio includes an integrated **Remotion Motion Graphics Studio** powered by `@remotion/player` and `remotion`. This allows you to compose, preview, and customize parametric React-based title cards, lower thirds, progress bars, and kinetic typography directly over your generated AI video clips.
+
+### Key Capabilities:
+- **Dual Player Modes**: Seamlessly toggle between **📹 Raw Video** and **⚡ Remotion Studio Player** with live keyframe scrubbing.
+- **Physics-Based Spring Animations**: Fluid entrance and exit animations computed with Remotion's `spring()` and `interpolate()` math primitives.
+- **4 Visual Themes**:
+  - 👑 **Cinematic Gold**: Warm amber gradients and gold borders for dramatic narratives.
+  - 🌆 **Cyberpunk Neon**: High-contrast cyan and hot pink glows for sci-fi scenes.
+  - 🔮 **Electric Violet**: Deep purple and sky-blue highlights for stylized visuals.
+  - ⚡ **Sleek Minimal**: Clean slate glassmorphism for modern documentaries and demos.
+- **Parametric Placements**: Position overlays as **Lower Third**, **Centered Intro Card**, or **Top Banner**.
+- **Synchronized Progress Bar**: Frame-accurate visual timeline tracker.
+- **One-Click Remotion Code Export**: Export standalone Remotion JSX composition code pre-populated with your video URL and overlay parameters.
+
+### Headless Rendering with Remotion CLI:
+Click **"📋 Export Remotion Code"** in the studio player to copy the standalone composition snippet, then render it directly to MP4 or ProRes:
+```bash
+npx remotion render VeoSceneWithRemotionOverlay out/cinematic_scene.mp4
+```
+
+---
+
 ## 📁 Project Structure
 
 ```
 Video-Editor/
 ├── components/
-│   ├── ApiKeySelector.tsx    # Modal for Gemini API key input with localStorage & AI Studio support
-│   ├── ClipHistory.tsx       # Session video reel showing generated & extended clips
-│   ├── Header.tsx            # Sticky header with branding, key reset, and repo link
-│   ├── Icons.tsx             # Clean SVG iconography set
-│   ├── ImageUploader.tsx     # Drag & drop starter image uploader
-│   ├── LoadingIndicator.tsx  # Dynamic multi-stage video generation progress indicator
-│   ├── PromptInput.tsx       # Textarea input for scene descriptions
-│   ├── PromptPresets.tsx     # Quick-click cinematography and lighting chips
-│   └── VideoPlayer.tsx       # HTML5 player with scene extension, MP4 export, & audio suggestions
+│   ├── ApiKeySelector.tsx            # Modal for Gemini API key input with localStorage & AI Studio support
+│   ├── ClipHistory.tsx               # Session video reel showing generated & extended clips
+│   ├── Header.tsx                    # Sticky header with branding, key reset, and repo link
+│   ├── Icons.tsx                     # Clean SVG iconography set
+│   ├── ImageUploader.tsx             # Drag & drop starter image uploader
+│   ├── LoadingIndicator.tsx          # Dynamic multi-stage video generation progress indicator
+│   ├── PromptInput.tsx               # Textarea input for scene descriptions
+│   ├── PromptPresets.tsx             # Quick-click cinematography and lighting chips
+│   ├── RemotionOverlayComposition.tsx # Remotion composition with spring physics & themes
+│   └── VideoPlayer.tsx               # Player with Remotion Studio toggle, overlay controls & audio suggestions
 ├── services/
-│   └── geminiService.ts      # @google/genai SDK integration (Veo 3.1 & Gemini 2.5 Flash)
+│   └── geminiService.ts              # @google/genai SDK integration (Veo 3.1 & Gemini 2.5 Flash)
 ├── utils/
-│   └── fileUtils.ts          # File to base64 conversion utilities
-├── types.ts                  # TypeScript definitions for Veo options and operations
-├── App.tsx                   # Main application controller and state
-├── index.html                # Entry HTML
-├── package.json              # Project scripts and dependencies
-├── vite.config.ts            # Vite bundler configuration
-└── LICENSE                   # MIT License
+│   └── fileUtils.ts                  # File to base64 conversion utilities
+├── types.ts                          # TypeScript definitions for Veo options and operations
+├── App.tsx                           # Main application controller and state
+├── index.html                        # Entry HTML
+├── package.json                      # Project scripts and dependencies
+├── vite.config.ts                    # Vite bundler configuration
+└── LICENSE                           # MIT License
 ```
 
 ---
@@ -120,6 +145,7 @@ Video-Editor/
 ## 🛠️ Built With
 
 - **[React 19](https://react.dev/)**
+- **[Remotion (`@remotion/player`)](https://www.remotion.dev/)**
 - **[Vite](https://vitejs.dev/)**
 - **[TypeScript](https://www.typescriptlang.org/)**
 - **[Tailwind CSS](https://tailwindcss.com/)**
