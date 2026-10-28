@@ -8,6 +8,7 @@
 [![React](https://img.shields.io/badge/React-19-61dafb.svg?logo=react&logoColor=black)](https://react.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.8-3178c6.svg?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Vite](https://img.shields.io/badge/Vite-6.2-646cff.svg?logo=vite&logoColor=white)](https://vitejs.dev/)
+[![Remotion](https://img.shields.io/badge/Remotion-4.0-0b84f3.svg?logo=react&logoColor=white)](https://www.remotion.dev/)
 [![Google GenAI SDK](https://img.shields.io/badge/Google%20Gen%20AI-SDK%201.28-4285f4.svg?logo=google&logoColor=white)](https://www.npmjs.com/package/@google/genai)
 
 <br/>
@@ -23,6 +24,7 @@ Create stunning high-definition cinematic videos from text prompts or starting i
 - 🎥 **Text-to-Video Generation**: Turn creative ideas into photorealistic videos using Google's **Veo 3.1** model (`veo-3.1-generate-preview`).
 - 🖼️ **Image-to-Video Storyboarding**: Upload an initial photo or concept art and direct Veo to bring it into dynamic motion.
 - 🎞️ **Continuous Scene Extension**: Extend any existing clip into multi-scene films with full narrative coherence.
+- ⚡ **Remotion Motion Graphics Studio**: Integrated `@remotion/player` rendering programmatic React title cards, spring physics entrances, animated progress bars, and kinetic typography over your AI footage with full theme customization and one-click Remotion code export.
 - 🎬 **Cinematography Preset Chips**: Clickable camera angles (*dolly shot, FPV drone flyover, 360 orbit*), lighting moods (*golden hour, cyberpunk neon, film noir*), and visual styles (*vintage 16mm film, 3D animation, photorealistic 8K*).
 - 🎵 **AI Audio Soundscape Designer**: Powered by **Gemini 2.5 Flash**, generate custom musical scores, ambient foley soundscapes, and tempo recommendations for each scene.
 - 📽️ **Session Video Reel & History**: Horizontal timeline carousel tracking all generated iterations and extensions in your session with one-click MP4 download.
